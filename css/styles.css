@@ -29,6 +29,7 @@ h2, h3, a {
 
 a {
     text-decoration: none;
+    list-style: none;
 }
 
 .logo {
@@ -53,10 +54,8 @@ a {
     border: 1px solid #a2a2a2;
     background-color: #f4f4f4;
     -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-    moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
     -webkit-border-radius: 5px;
-    moz-border-radius: 5px;
     border-radius: 5px;
 }
 
@@ -120,7 +119,49 @@ img {
     background-color: #f30c;
 }
 
+.card {
+    display: grid;
+    grid-template-rows: max-content 200px 1fr;
+    border: 2px dashed #0b7ab0;
+    background-color: #375872;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.card header {
+    background-color: #999;
+    color: #333;
+    padding: 5%;
+    border-radius: 15px;
+}
+
+.card .content {
+    padding: 5%;
+}
+
+.card footer {
+    background-color: #333;
+    color: #fff;
+    padding: 5%;
+    max-height: 100px;
+    border-radius: 15px;
+}
+
 @media (min-width: 769px) {
+
+    .header, .main-nav {
+        display: flex;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        .header {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1150px;;
+        }
+    }
 
     .grid {
         grid-template-columns: 1fr 1fr;
@@ -153,13 +194,13 @@ img {
         grid-column: 1 / 2;
     }
 
-    .five {
+    .seven {
         grid-column: 2 / 3;
     }
 }
 
 @media (min-width: 1025px) {
-    .geoffrey {
+    .header {
         flex-direction: row;
         justify-content: space-between;
     }
